@@ -27,7 +27,9 @@ function App() {
       </div>
       <button onClick={제목바꾸기}>버튼</button>
       <div className='list'>
-        <h3>{글제목[0]} <span onClick={() => {따봉변경(따봉 + 1)}}>👍</span> {따봉} </h3>
+        <h3>{글제목[0]} <span onClick={() => {
+          따봉변경(따봉 + 1)
+        }}>👍</span> {따봉} </h3>
         <p>2월 17일 발행</p>
         <hr/>
       </div>
@@ -41,8 +43,33 @@ function App() {
         <p>2월 19일 발행</p>
         <hr/>
       </div>
+
+      <Modal />
+
     </div>
   );
 }
 
+// component name 은 대문자
+function Modal() {
+  return (
+    <>
+      <div className="modal">
+        <h2>제목</h2>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div>
+      <div></div>
+    </>
+  );
+}
+
 export default App;
+
+// 어떤걸 Component로 만들까?
+  // 반복 출현하는 HTML 덩어리들
+  // 자주 변경되는 HTML UI들
+  // 다른 페이지 만들 때도 컴포넌트로 만듬
+// 단점
+// state 쓸 때 복잡해짐
+
