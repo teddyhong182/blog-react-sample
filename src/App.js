@@ -6,6 +6,8 @@ import TodoList from "./TodoList";
 import {Todo} from "./Todo";
 function App() {
   console.log(`NODE_ENV = ${process.env.NODE_ENV}`);
+  console.log(`REACT_APP_DATA_API = ${process.env.REACT_APP_DATA_API}`);
+  console.log(`REACT_APP_LOGIN_API = ${process.env.REACT_APP_LOGIN_API}`);
 
   let [글제목, 글제목변경] = useState(['남자 코드 추천', '강남 우동 맛집', '선릉 국밥 맛집']);
 
