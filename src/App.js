@@ -5,7 +5,7 @@ import './App.css';
 import TodoList from "./TodoList";
 import {Todo} from "./Todo";
 function App() {
-
+  console.log(`NODE_ENV = ${process.env.NODE_ENV}`);
 
   let [글제목, 글제목변경] = useState(['남자 코드 추천', '강남 우동 맛집', '선릉 국밥 맛집']);
 
